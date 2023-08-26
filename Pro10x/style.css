@@ -1,0 +1,268 @@
+/* Reset some default styles */
+body, h1, h2, h3, ul, li, p {
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Global styles */
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #f2f2f2;
+  }
+  
+  header {
+    background-color: #fff;
+    padding: 10px 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  nav ul {
+    list-style: none;
+    height: 6rem;
+    display: flex;
+    justify-content: center;
+  }
+  
+  nav li {
+    margin: 2rem 1.5rem;
+    font-size: 1.5rem;
+  }
+  #home{
+    background-image: linear-gradient(0deg, rgba(0,0,0,0.55), rgba(0,0,0,0.55)), url(bg.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 50% 50%;
+    min-height: 80vh;
+}
+
+  nav a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+  }
+  a:hover{
+    text-decoration: underline;
+    color: #007bff;
+  }
+  section {
+    padding: 50px 0;
+  }
+  
+  /* Home section */
+  .heading{
+    text-align: center;
+    font-size: 6.5rem;
+    padding-top: 8rem;
+    color: #fff;
+  }
+  .slogan{
+    font-size: 1.5rem;
+    color: #fff;
+    text-align: center;
+    padding-top: 2rem;
+  }
+  .btn{
+    font-size: 1.5rem;
+    margin-top: 15rem;
+    margin-left: 46%;
+    color: #fff;
+    background-color: rgb(220, 50, 50);
+    width: min-content;
+    padding: 1.5rem 1.7rem;
+    text-transform: uppercase;
+    border: none;
+    cursor: pointer;
+  }
+  /* Projects section */
+  .projects{
+    min-height: auto;
+    background-color: #333;
+  }
+  /* .project-grid {
+  display: grid;
+  grid-template-rows: repeat(3,1fr);
+  gap: 2rem;
+  margin-left: 14rem;
+  align-items: center;
+  gap: 2rem;
+  justify-content: center; 
+  margin: 0 auto; 
+  max-width: 1200px; 
+  } */
+
+  h3{
+    font-size: 2rem;
+    color: aqua;
+  }
+  .para{
+    font-size: 1.3rem;
+  }
+  .courses{
+    display: flex;
+    align-items: center;
+    margin-left: 29rem;
+    gap: 2rem;
+    /* margin: 0 auto; */
+    max-width: 1200px;
+  }
+  .courses1{
+    display: flex;
+    align-items: center;
+    margin-left: 40rem;
+    gap: 2rem;
+    /* margin: 0 auto; */
+    max-width: 1200px;
+  }
+  .project {
+  width: calc(33% - 20px);
+  transition: transform 0.3s ease; 
+  margin: 10px;
+  padding: 15px;
+  height: 300px;
+  width: 300px;
+  column-gap: 1rem;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  box-shadow: 0px 4px 25px rgba(95, 99, 100, 0.509);
+  border-radius: .5rem;
+  overflow: hidden;
+  box-sizing: border-box;
+  position: relative;
+  display: grid;
+    grid-template-columns: repeat(0,1fr);
+    
+  }
+  .project:hover {
+    transform: scale(1.05); 
+    bottom: 0; 
+  }
+  
+  .project img {
+    max-width: 100%;
+    height: 100%;
+  }
+  
+  .project {
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .project .content {
+    position: absolute;
+    bottom: -100%; /* Initially move the content off the screen */
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: #fff;
+    padding: 40px;
+    transition: bottom 0.3s ease;
+  }
+  
+  .project:hover .content {
+    bottom: 0; /* Slide the content up on hover */
+  }
+  
+  .live-button {
+    display: inline-block;
+    background-color: #007bff;
+    color: #fff;
+    font-size: 1rem;
+    margin-top: 1rem;
+    padding: 7px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+  }
+  .midhead {
+    text-align: center;
+    line-height: normal;
+    opacity: 0;
+    margin: 2rem 2rem;
+    line-height: 4rem;
+    color: #fff;
+    font-size: 2rem;
+    transform: translateY(-20px);
+    animation: fadeInUp 1s forwards;
+  }
+  @keyframes fadeInUp {
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  /* Contact section */
+  .contact-details {
+    text-align: center;
+  }
+  
+  /* Footer section */
+  footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+  }
+  
+
+/* Media Queries */
+@media screen and (max-width: 768px) {
+  nav ul {
+    flex-direction: row;
+    align-items: center;
+    height: auto; /* Adjust the height for mobile */
+    font-size: 1rem;
+    row-gap: 1rem;
+  }
+
+  nav li {
+    margin: 10px 0;
+    padding-left: 1rem;
+  }
+
+  #home {
+    background-size: cover;
+    min-height: 60vh; /* Adjust the height for mobile */
+  }
+  .heading{
+    text-align: center;
+    font-size: 4rem;
+    padding-top: 8rem;
+    color: #fff;
+  }
+  /* Adjust positioning and sizing for the button on mobile */
+  .btn {
+    margin-top: 8rem;
+    margin-left: 6rem;  
+    width: 50%;
+    padding: .8rem .5rem;
+    text-align: center;
+  }
+
+  /* Adjust positioning for the projects on mobile */
+  .courses,
+  .courses1 {
+    margin-left: .9rem;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .project {
+    width: 80%; /* Adjust the width for mobile */
+    margin: 10px 0;
+  }
+
+  /* Adjust the font size for the project heading on mobile */
+  .project h3 {
+    font-size: 1.2rem;
+  }
+
+  /* Adjust padding for the heading on mobile */
+  .midhead {
+    padding: 1rem;
+    font-size: 1.5rem;
+    line-height: 2.5rem;
+  }
+}
+
+/* Rest of your existing CSS code */
+
+  
